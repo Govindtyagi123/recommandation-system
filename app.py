@@ -38,7 +38,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.feature_extraction.text import CountVectorizer
 
 # create similarity dynamically
-cv = CountVectorizer(max_features=5000, stop_words='english')
+cv = CountVectorizer(max_features=2000, stop_words='english')
 vectors = cv.fit_transform(movies_list['tags']).toarray()
 
 similarity = cosine_similarity(vectors)
