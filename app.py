@@ -18,10 +18,6 @@ def fetch_poster(movie_id):
             time.sleep(1)  # wait before retry
 
     return "https://via.placeholder.com/500x750?text=No+Image"
-#def fetch_poster(movie_id):
- #   response=requests.get('https://api.themoviedb.org/3/movie/{}?api_key=0a17f2c0c35553b988319b763e54f0da&language=en-US'.format(movie_id))
-  #  data=response.json()
-   # return "https://image.tmdb.org/t/p/w500/" + data["poster_path"]
 def recommand(movie):
     m=movies_list[movies_list["title"]==movie].index[0]
     distances = similarity[m]
